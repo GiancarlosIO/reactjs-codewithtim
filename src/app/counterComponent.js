@@ -19,10 +19,10 @@ var CounterComponent = React.createClass({
     return(
       <div>
         <h2>Count: {this.state.counter}</h2>
-        <CounterButtonComponent handleUpCounter={this.upCounter.bind(this, 1)} number={this.props.number1}/>
-        <CounterButtonComponent handleUpCounter={this.upCounter.bind(this, 5)} number={this.props.number2}/>
-        <CounterButtonComponent handleUpCounter={this.upCounter.bind(this, 10)} number={this.props.number3}/>
-        <button onClick={this.resetCounter}>Reset counter</button>
+        <CounterButtonComponent clickHandler={this.upCounter.bind(this, 1)} text={'Add' + ' ' + this.props.number1}/>
+        <CounterButtonComponent clickHandler={this.upCounter.bind(this, 5)} text={'Add' + ' ' + this.props.number2}/>
+        <CounterButtonComponent clickHandler={this.upCounter.bind(this, 10)} text={'Add' + ' ' + this.props.number3}/>
+        <CounterButtonComponent clickHandler={this.resetCounter} text="Reset Counter"/>
       </div>
     );
   },
