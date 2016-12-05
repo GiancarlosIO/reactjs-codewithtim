@@ -3,6 +3,8 @@ var ReactDOM = require('react-dom');
 
 var CounterComponent = require('./counterComponent');
 var LikesComponent = require('./likesComponent');
+import Es6Component from './es6Component';
+import CounterEs6Component from './counterEs6Component';
 
 var AppComponent = React.createClass({
   propTypes: {
@@ -35,6 +37,12 @@ var AppComponent = React.createClass({
         <div id="likes-component">
           <LikesComponent />
         </div>
+        <hr />
+        <h1>React with es6</h1>
+        <Es6Component />
+        <hr/>
+        <h1>CounterComponent refactor with es6</h1>
+        <CounterEs6Component />
       </div>
     );
   },
