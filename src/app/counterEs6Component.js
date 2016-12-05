@@ -3,11 +3,17 @@ import React from 'react';
 class CounterEs6Component extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      counter: 0
+    }
   }
 
   render() {
     return (
-      <span>im the counteres6 component</span>
+      <div>
+        <span>{this.state.counter}</span>
+        
+      </div>
     )
   }
 }
