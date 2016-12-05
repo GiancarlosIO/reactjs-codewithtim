@@ -1,15 +1,15 @@
 import React from 'react';
 
-class CounterEs6ButtonComponent extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const CounterEs6ButtonComponent = (props) => {
+  return(
+    <button onClick={props.handlerClick}>{props.text} {props.number}</button>
+  );
+}
 
-  render() {
-    return(
-      <button onClick={this.props.handlerClick}>{this.props.text} {this.props.number}</button>
-    );
-  }
+CounterEs6ButtonComponent.propTypes = {
+  text: React.PropTypes.string,
+  number: React.PropTypes.number,
+  handlerClick: React.PropTypes.func.isRequired
 }
 
 export default CounterEs6ButtonComponent;
