@@ -23,12 +23,18 @@ class CounterEs6Component extends React.Component {
       <div>
         <span>{this.state.counter}</span>
         <br/>
-        <CounterEs6ButtonComponent number={1} text="Add" handlerClick={()=>this.increment(1)}/>
-        <CounterEs6ButtonComponent number={5} text="Add" handlerClick={()=>this.increment(5)}/>
-        <CounterEs6ButtonComponent number={10} text="Add" handlerClick={()=>this.increment(10)}/>
+        <CounterEs6ButtonComponent number={this.props.number1} text={this.props.text} handlerClick={()=>this.increment(1)}/>
+        <CounterEs6ButtonComponent number={this.props.number2} text={this.props.text} handlerClick={()=>this.increment(5)}/>
+        <CounterEs6ButtonComponent number={this.props.number3} text={this.props.text} handlerClick={()=>this.increment(10)}/>
       </div>
     )
   }
 }
 
+CounterEs6Component.defaultProps = {
+  number1: 1,
+  number2: 5,
+  number3: 10,
+  text: 'Add'
+}
 export default CounterEs6Component;
